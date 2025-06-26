@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emma & Liam's Wedding</title>
+
+        <!-- Primary Meta Tags -->
+    <meta name="title" content="Emma & Liam's Wedding Invitation">
+    <meta name="description" content="You're invited to celebrate the wedding of Emma & Liam on June 25, 2025 at Lakeview Garden, Napa Valley. Join us for a magical celebration of love!">
+
+    <!-- Make sure the image used in og:image and twitter:image:
+      Is hosted online (use your actual domain or hosting URL)
+      Is at least 1200x630px for best quality
+      Has minimal text and looks good as a thumbnail (e.g., a picture of the couple or venue) -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Emma & Liam's Wedding Invitation">
+    <meta property="og:description" content="Join us on June 25, 2025 at Lakeview Garden, Napa Valley to celebrate the love story of Emma & Liam. Your presence is the greatest gift!">
+    <meta property="og:image" content="https://yourdomain.com/assets/cover-image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yourdomain.com/">
+    <meta name="twitter:title" content="Emma & Liam's Wedding Invitation">
+    <meta name="twitter:description" content="Join us on June 25, 2025 at Lakeview Garden, Napa Valley to celebrate Emma & Liam's special day.">
+    <meta name="twitter:image" content="https://yourdomain.com/assets/cover-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&family=Poppins:wght@600&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  </head>
+  <body>
+    <div id="tsparticles"></div>
+
+    <section class="hero">
+      <div class="overlay">
+        <!-- Modern styled invitee greeting -->
+        <h3 class="invitee-name">
+          Dear <span id="invitee-name">Jeeven Lamichhane</span>,
+        </h3>
+        <h3 class="invitee-greeting">You're invited!</h3>
+
+        <p class="invite-message">
+          Your presence will fill our hearts with joy and make our celebration
+          truly magical.<br />
+          We warmly invite you to share in our special day and bless us with
+          your love and good wishes.<br />
+          And remember, don't worry about gifts — having you with us is the
+          greatest gift of all.
+        </p>
+
+        <div class="couple-container">
+          <div class="person">
+            <img src="./assets/bride-groom.jpeg" alt="Bride" />
+            <!-- <h2>Emma</h2> -->
+          </div>
+          <div class="person">
+            <img src="./assets/bride-groom1.jpeg" alt="Groom" />
+            <!-- <h2>Liam</h2> -->
+          </div>
+        </div>
+        <h1 class="names">Emma <span class="heart">❤</span> Liam</h1>
+        <p class="date">June 25, 2025</p>
+        <p class="location">Lakeview Garden, Napa Valley</p>
+        <p class="time">Ceremony begins at 4:00 PM</p>
+        <div id="countdown" class="countdown-timer">
+          <div class="time-box">
+            <span id="days">0</span><small>Days</small>
+          </div>
+          <div class="time-box">
+            <span id="hours">0</span><small>Hours</small>
+          </div>
+          <div class="time-box">
+            <span id="minutes">0</span><small>Minutes</small>
+          </div>
+          <div class="time-box">
+            <span id="seconds">0</span><small>Seconds</small>
+          </div>
+        </div>
+
+        <!-- <a href="https://forms.gle/your-rsvp-form" target="_blank" class="rsvp-button">RSVP Now</a> -->
+      </div>
+    </section>
+
+    <section class="love-story">
+      <h2>Our Love Story</h2>
+      <p>
+        We met under the stars, laughed through seasons, and now, we're saying
+        "I do" forever.
+      </p>
+      <p>Join us as we celebrate love, family, and a lifetime together.</p>
+    </section>
+
+    <footer>
+      <p>With love, Emma & Liam</p>
+    </footer>
+
+    <audio id="bg-music" loop>
+      <source src="./assets/piya.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  background-color: #fff8f2;
+}
+
+h1,
+h2 {
+  font-family: "Great Vibes", cursive;
+}
+
+.hero {
+  height: 100vh;
+  background: url("./assets/bg2.jpg") no-repeat center center/cover;
+  position: relative;
+}
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Behind everything */
+  pointer-events: none;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.couple-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.person img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+.person h2 {
+  margin-top: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #fff; /* white or any color that fits your overlay */
+  letter-spacing: 1px;
+  text-transform: uppercase; /* optional, for a clean modern look */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border-bottom: 1.2px solid #b23b56;
+  padding-bottom: 0.2rem;
+  display: none;
+}
+
+.names {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #b23b56;
+  margin: 1.5rem 0;
+  letter-spacing: 0.1em;
+  text-align: center;
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+/* Style the heart emoji separately for a pop of color & subtle animation */
+.names::before {
+  content: "❤";
+  color: #ff4961; /* bright pink-red */
+  font-size: 3.8rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: drop-shadow(0 0 2px #ff6f81);
+  animation: heartbeat 1.5s infinite;
+  z-index: -1;
+}
+
+/* Remove the heart from the text itself */
+.names {
+  position: relative;
+}
+
+/* If you want to keep the heart in text, style it via a span */
+.names span.heart {
+  color: #ff4961;
+  font-size: 4rem;
+  margin: 0 0.3rem;
+  text-shadow: 0 2px 5px rgba(255, 73, 97, 0.5);
+  animation: heartbeat 1.5s infinite;
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  50% {
+    transform: scale(1.15) translate(-50%, -50%);
+  }
+}
+
+.date,
+.location {
+  font-size: 1.5rem;
+}
+
+#countdown {
+  margin: 1.5rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.time-box {
+  background-color: #fff;
+  color: #b23b56;
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 70px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.time-box small {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.invitee-name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #ffdede; /* soft warm pink */
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #ff6b81; /* subtle modern underline */
+  display: inline-block;
+  padding-bottom: 0.15rem;
+  transition: color 0.3s ease;
+}
+
+.invitee-name span {
+  color: #ff5a6e; /* a stronger accent color */
+  font-weight: 800;
+  border-bottom: none; /* remove underline from span */
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+
+.invitee-name:hover {
+  color: #ff4a5a;
+  cursor: default;
+}
+
+.invitee-greeting {
+  font-family: "Montserrat", sans-serif; /* modern, geometric sans-serif */
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ff6f81; /* warm coral-pink accent */
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.invite-message {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  color: #f7dede; /* lighter soft pink */
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.time {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  color: #ff4961; /* stronger pink-red */
+  text-align: center;
+  letter-spacing: 0.04em;
+  user-select: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.rsvp-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #b23b56;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+.rsvp-button:hover {
+  background-color: #ffe2e8;
+}
+
+.love-story {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #fffdf9;
+}
+
+.love-story h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #b23b56;
+}
+
+.love-story p {
+  font-size: 1.2rem;
+  margin: 0.5rem auto;
+  max-width: 600px;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  color: #b23b56;
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 1rem;
+  }
+
+  .couple-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .person img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .person h2 {
+    font-size: 1.3rem;
+  }
+
+  .names {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+
+  .names span.heart {
+    font-size: 3rem;
+  }
+
+  .invitee-greeting {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .invitee-name {
+    font-size: 1.3rem;
+    border-bottom-width: 1.5px;
+  }
+
+  .invite-message {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .date,
+  .location,
+  .time {
+    font-size: 1.1rem;
+  }
+
+  .countdown-timer {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .time-box {
+    font-size: 1.2rem;
+    min-width: 60px;
+    padding: 0.75rem;
+  }
+
+  .love-story h2 {
+    font-size: 2rem;
+  }
+
+  .love-story p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .rsvp-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .names {
+    font-size: 2rem;
+  }
+
+  .invite-message {
+    font-size: 0.95rem;
+  }
+
+  .time-box {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
